@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Infinite Autoplay Slider</title>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slide-track"></div>
+    </div>
+    <script>
+      const slides = document.querySelector('.slide-track');
+      var ht = [];
+      for (let i = 0; i < 9; i++) {
+        ht.push(
+          `<div class="slide"><img src="./images/logo${i + 1}.png" /></div>`
+        );
+      }
+      slides.innerHTML = ht.join('') + ht.join('');
+    </script>
+  </body>
+</html>
